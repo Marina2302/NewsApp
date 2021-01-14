@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+
+    <string name="find_icon">Find keyword</string>
+    <string name="delete_icon">Delete all favourites news</string>
+    <string name="headlines_icon">Headlines</string>
+    <string name="share_icon">Share</string>
+    <string name="layers_icon">Layers</string>
+
+    <string name="image_description">News image</string>
+    <string name="image_button_description">Favourite button</string>
+
+    <string name="author_sample">John Kelleher</string>
+    <string name="date_sample">19 March 2018 | 15:03</string>
+    <string name="date_sample_rv">19.03.2018 | 15:03</string>
+    <string name="title_sample">Cryptocurrency Doesn\'t Pose A Risk To The Financial System … Yet, G20 Told</string>
+    <string name="description_sample">Electronic Frontier Foundation joins other companies that added Bitcoin Cash payment option.Microsoft, Tor and Overstock.com accept Bitcoin and Bitcoin Cash</string>
+
+    <string name="top_headlines_category_label">Category</string>
+    <string name="filter_label">Filter by</string>
+    <string name="radio_all_label">All</string>
+    <string name="radio_business_label">Business</string>
+    <string name="radio_entertainment_label">Entertainment</string>
+    <string name="radio_general_label">General</string>
+    <string name="radio_health_label">Health</string>
+    <string name="radio_science_label">Science</string>
+    <string name="radio_sports_label">Sports</string>
+    <string name="radio_technology_label">Technology</string>
+    <string name="go_to_web_button">Visit web page</string>
+
+    <string name="snackbar_error_connection">Connection error</string>
+
+    <string name="no_news">No news :(</string>
+</resources>

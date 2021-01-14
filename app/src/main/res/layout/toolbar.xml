@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ToolbarStyle"
+    app:elevation="4dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
