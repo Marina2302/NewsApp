@@ -29,13 +29,17 @@ class NewsLocalDataSource(private val database: NewsDatabase) {
     }
 
     fun getFavourites(): Single<List<News>> {
-        return database.newsDao().getFavorites(true)
+        return database.newsDao().getFavoritesNews()
     }
 
     fun insertNews(news: List<News>) {
         GlobalScope.launch {
-            val favoriteNewsIds = database.newsDao().getFavoritesNews().map { fav -> fav.id }
-            database.newsDao().insertAll(news.filter { !favoriteNewsIds.contains(it.id) })
+            database.newsDao().getFavoritesNews()
+                    .subscribeOn(Schedulers.io())
+                    .subscribe { favNews ->
+                        val favoriteNewsIds = favNews.map { fav -> fav.id }
+                        database.newsDao().insertAll(news.filter { !favoriteNewsIds.contains(it.id) })
+                    }
         }
     }
 

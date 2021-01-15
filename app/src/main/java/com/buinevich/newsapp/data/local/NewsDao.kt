@@ -19,13 +19,10 @@ interface NewsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(news: List<News>)
 
-    @Query("SELECT * FROM news WHERE isFavourite = :isFavourite")
-    fun getFavorites(isFavourite: Boolean): Single<List<News>>
-
     @Query("DELETE FROM news WHERE isFavourite = 1")
     fun deleteAllFavorites()
 
     @Query("SELECT * FROM news WHERE isFavourite = 1")
-    fun getFavoritesNews(): List<News>
+    fun getFavoritesNews(): Single<List<News>>
 
 }
