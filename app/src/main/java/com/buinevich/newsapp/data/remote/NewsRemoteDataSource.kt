@@ -25,7 +25,7 @@ class NewsRemoteDataSource(private val apiService: NewsService) : RemoteDataSour
     }
 
     override fun getTopHeadlinesByCategory(category: String): Single<List<News>> {
-        return apiService.requestTopHeadlinesByCategory(category).onErrorReturn { NewsResponse() }.map { it.articles?.convertToNews() }
+        return apiService.requestTopHeadlinesByCategory(category, Locale.getDefault().country).onErrorReturn { NewsResponse() }.map { it.articles?.convertToNews() }
     }
 
     private fun List<Article>.convertToNews(): List<News> {
